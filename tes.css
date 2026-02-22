@@ -1,0 +1,14 @@
+body{
+    font-family: arial;
+    background-image: url('image.png');
+    background-size: cover;
+}
+
+h1{
+    color: rgb(138, 142, 255);
+}
+p{
+    font-size: large;
+    color: #ffffff;
+    text-align: center;
+}
