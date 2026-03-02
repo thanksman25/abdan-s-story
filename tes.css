@@ -1,6 +1,8 @@
 body{
     font-family: arial;
-    background-image: url('image.png');
+    /* background-image: url('image.png'); */
+    /* background-color: cyan; */
+    background-color: rgb(255, 0, 255);
     background-size: cover;
 }
 
