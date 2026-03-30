@@ -1,13 +1,118 @@
 <!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="tes.css">
-    <head>
-        <title>Abdan's portfolio</title>
-    </head>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdan Syakura | Data Science & Informatics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <h1>Holaaa, I'm Abdan Syakura</h1>
-        <p>Let me introduce myself, my name is Abdan Syakura. I'm an IT student at Syiah Kuala University. 
-            I'm currently focusing on software engineering and data science.</h3>
-    </body>
+    <nav>
+        <div class="container nav-wrapper">
+            <div class="logo">Abdan<span>.sy</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="greeting">Halo, Saya</p>
+                <h1>Abdan Syakura <br>bin Yasir</h1>
+                <p class="tagline">Mahasiswa Informatika USK yang sedang mendalami dunia <strong>Data Science</strong> untuk solusi masa depan.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn primary">Lihat Proyek</a>
+                    <a href="#contact" class="btn secondary">Hubungi Saya</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Saat ini saya menempuh pendidikan di <strong>Informatika Universitas Syiah Kuala</strong>. Saya memiliki antusiasme tinggi dalam mempelajari bagaimana data dapat memberikan wawasan berharga bagi lingkungan dan masyarakat.</p>
+                    <p>Fokus utama saya saat ini adalah memperdalam kemampuan <strong>Python</strong>, <strong>Analisis Data</strong>, dan <strong>Machine Learning</strong>. Saya percaya bahwa setiap angka memiliki cerita, dan tugas saya adalah menceritakannya dengan akurat.</p>
+                    
+                    <div class="skills">
+                        <h3>Keahlian Utama:</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">Python (Data Science)</span>
+                            <span class="skill-item">Data Analysis</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">Web Development (HTML/CSS)</span>
+                            <span class="skill-item">UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Eksplorasi Proyek</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">🌱</div>
+                    <div class="project-info">
+                        <h3>Boncar</h3>
+                        <p>Inovasi kalkulator karbon digital berbasis website untuk memantau emisi karbon secara efisien.</p>
+                        <a href="https://boncar-carboncalculator.vercel.app/" target="_blank" class="project-link">Lihat Live Proyek &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">📊</div>
+                    <div class="project-info">
+                        <h3>Data Visualization Proj.</h3>
+                        <p>Analisis tren data menggunakan pustaka Python (Pandas & Matplotlib) untuk studi kasus akademik.</p>
+                        <span class="status">Sedang Berjalan</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">🏛️</div>
+                    <div class="project-info">
+                        <h3>EduParlemen Iklim</h3>
+                        <p>Sistem simulasi kebijakan iklim untuk edukasi lingkungan bagi mahasiswa.</p>
+                        <span class="status">Arsip Proyek</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-card">
+                <h2>Mari Berdiskusi</h2>
+                <p>Saya selalu terbuka untuk kolaborasi terkait proyek data atau sekadar bertukar pikiran tentang teknologi.</p>
+                <div class="email-box">
+                    <strong>Email:</strong> syakuraabdanby@gmail.com
+                </div>
+                <div class="socials">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+                <a href="mailto:syakuraabdanby@gmail.com" class="btn primary">Kirim Email Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Abdan Syakura. Dibuat dengan semangat belajar di Banda Aceh.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
