@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdan Syakura | Data Science & Informatics</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Abdan Syakura | Data Science & Informatika</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* CSS DASAR */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --sky-light: #f0f9ff;
+            --sky-main: #0ea5e9;
+            --sky-dark: #0369a1;
+            --navy: #0c4a6e;
+            --text: #334155;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background-color: var(--white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        /* NAVIGASI */
+        nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--navy); }
+        .logo span { color: var(--sky-main); }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; }
+        .nav-links a { text-decoration: none; color: var(--navy); font-weight: 600; transition: var(--transition); }
+        .nav-links a:hover { color: var(--sky-main); }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background: radial-gradient(circle at top right, var(--sky-light), #ffffff);
+            display: flex; align-items: center; padding-top: 80px;
+        }
+        .hero h1 { font-size: 4rem; line-height: 1.1; color: var(--navy); margin-bottom: 1.5rem; }
+        .tagline { font-size: 1.25rem; max-width: 600px; margin-bottom: 2.5rem; }
+        .btn { padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 700; transition: var(--transition); display: inline-block; }
+        .btn.primary { background: var(--sky-main); color: var(--white); }
+        .btn.secondary { border: 2px solid var(--sky-main); color: var(--sky-main); margin-left: 1rem; }
+
+        /* ABOUT SECTION */
+        section { padding: 100px 0; }
+        .section-title { font-size: 2.5rem; color: var(--navy); margin-bottom: 4rem; text-align: center; }
+        .about { background: var(--sky-light); }
+        .about-grid { background: var(--white); padding: 3rem; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.03); }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.5rem; }
+        .skill-item { background: var(--sky-light); color: var(--sky-dark); padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
+
+        /* PROJECT SECTION (PERUBAHAN DI SINI) */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .project-card { background: var(--white); border: 1px solid #f1f5f9; border-radius: 24px; overflow: hidden; transition: var(--transition); }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(14, 165, 233, 0.1); }
+        
+        /* Container untuk Logo/Gambar */
+        .project-img {
+            height: 200px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* CSS Agar Gambar Logo Rapi */
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Gambar akan menyesuaikan tanpa gepeng */
+            padding: 30px; /* Jarak agar logo tidak nempel ke pinggir kotak */
+        }
+
+        .project-info { padding: 2rem; }
+        .project-info h3 { margin-bottom: 0.8rem; color: var(--navy); }
+        .project-link { text-decoration: none; color: var(--sky-main); font-weight: 700; }
+
+        /* CONTACT SECTION */
+        .contact-card { background: var(--navy); color: var(--white); padding: 4rem; border-radius: 40px; text-align: center; }
+        footer { text-align: center; padding: 3rem 0; color: #94a3b8; }
+    </style>
 </head>
 <body>
 
@@ -23,14 +115,12 @@
 
     <header id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <p class="greeting">Halo, Saya</p>
-                <h1>Abdan Syakura <br>bin Yasir</h1>
-                <p class="tagline">Mahasiswa Informatika USK yang sedang mendalami dunia <strong>Data Science</strong> untuk solusi masa depan.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn primary">Lihat Proyek</a>
-                    <a href="#contact" class="btn secondary">Hubungi Saya</a>
-                </div>
+            <p style="color: var(--sky-main); font-weight: 600; letter-spacing: 2px;">HALO, SAYA</p>
+            <h1>Abdan Syakura <br>bin Yasir</h1>
+            <p class="tagline">Mahasiswa Informatika USK yang fokus pada <strong>Data Science</strong> dan solusi berbasis data.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary">Lihat Proyek</a>
+                <a href="#contact" class="btn secondary">Hubungi Saya</a>
             </div>
         </div>
     </header>
@@ -39,20 +129,12 @@
         <div class="container">
             <h2 class="section-title">Tentang Saya</h2>
             <div class="about-grid">
-                <div class="about-text">
-                    <p>Saat ini saya menempuh pendidikan di <strong>Informatika Universitas Syiah Kuala</strong>. Saya memiliki antusiasme tinggi dalam mempelajari bagaimana data dapat memberikan wawasan berharga bagi lingkungan dan masyarakat.</p>
-                    <p>Fokus utama saya saat ini adalah memperdalam kemampuan <strong>Python</strong>, <strong>Analisis Data</strong>, dan <strong>Machine Learning</strong>. Saya percaya bahwa setiap angka memiliki cerita, dan tugas saya adalah menceritakannya dengan akurat.</p>
-                    
-                    <div class="skills">
-                        <h3>Keahlian Utama:</h3>
-                        <div class="skill-list">
-                            <span class="skill-item">Python (Data Science)</span>
-                            <span class="skill-item">Data Analysis</span>
-                            <span class="skill-item">SQL</span>
-                            <span class="skill-item">Web Development (HTML/CSS)</span>
-                            <span class="skill-item">UI/UX Design</span>
-                        </div>
-                    </div>
+                <p>Mahasiswa Informatika di Universitas Syiah Kuala. Saat ini fokus mendalami pengolahan data, statistik, dan machine learning untuk memecahkan masalah nyata.</p>
+                <div class="skill-list">
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">Data Science</span>
+                    <span class="skill-item">SQL</span>
+                    <span class="skill-item">HTML/CSS</span>
                 </div>
             </div>
         </div>
@@ -62,30 +144,31 @@
         <div class="container">
             <h2 class="section-title">Eksplorasi Proyek</h2>
             <div class="project-grid">
+                
+                <!-- PROYEK 1: BONCAR -->
                 <div class="project-card">
-                    <div class="project-img">🌱</div>
+                    <div class="project-img">
+                        <img src="boncar.jpeg" alt="Logo Boncar" onerror="this.src='https://via.placeholder.com/200?text=Boncar'">
+                    </div>
                     <div class="project-info">
                         <h3>Boncar</h3>
-                        <p>Inovasi kalkulator karbon digital berbasis website untuk memantau emisi karbon secara efisien.</p>
-                        <a href="https://boncar-carboncalculator.vercel.app/" target="_blank" class="project-link">Lihat Live Proyek &rarr;</a>
+                        <p>Kalkulator karbon untuk menghitung emisi harian secara akurat.</p>
+                        <a href="https://boncar-carboncalculator.vercel.app/" target="_blank" class="project-link">Buka Situs &rarr;</a>
                     </div>
                 </div>
+
+                <!-- PROYEK 2: DATA SCIENCE -->
                 <div class="project-card">
-                    <div class="project-img">📊</div>
+                    <div class="project-img">
+                        <img src="eduparlemen.png" alt="EduParlemen" onerror="this.src='https://via.placeholder.com/200?text=Data+Science'">
+                    </div>
                     <div class="project-info">
-                        <h3>Data Visualization Proj.</h3>
-                        <p>Analisis tren data menggunakan pustaka Python (Pandas & Matplotlib) untuk studi kasus akademik.</p>
-                        <span class="status">Sedang Berjalan</span>
+                        <h3>Edu Parlemen</h3>
+                        <p>Aplikasi sistem debat kebijakan sekolah</p>
+                        <span style="color:#94a3b8; font-size: 0.8rem;">Dalam Pengembangan</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img">🏛️</div>
-                    <div class="project-info">
-                        <h3>EduParlemen Iklim</h3>
-                        <p>Sistem simulasi kebijakan iklim untuk edukasi lingkungan bagi mahasiswa.</p>
-                        <span class="status">Arsip Proyek</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -94,24 +177,15 @@
         <div class="container">
             <div class="contact-card">
                 <h2>Mari Berdiskusi</h2>
-                <p>Saya selalu terbuka untuk kolaborasi terkait proyek data atau sekadar bertukar pikiran tentang teknologi.</p>
-                <div class="email-box">
-                    <strong>Email:</strong> syakuraabdanby@gmail.com
-                </div>
-                <div class="socials">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Instagram</a>
-                </div>
-                <a href="mailto:syakuraabdanby@gmail.com" class="btn primary">Kirim Email Sekarang</a>
+                <p>Email: syakuraabdanby@gmail.com</p>
+                <br>
+                <a href="mailto:syakuraabdanby@gmail.com" class="btn primary">Kirim Email</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Abdan Syakura. Dibuat dengan semangat belajar di Banda Aceh.</p>
-        </div>
+        <p>&copy; 2025 Abdan Syakura. Banda Aceh, Indonesia.</p>
     </footer>
 
 </body>
