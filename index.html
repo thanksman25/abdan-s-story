@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdan Syakura | Data Science & Informatika</title>
-    <!-- Google Fonts -->
+    <title>Abdan's Portofolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS DASAR */
+        /* (Gaya inline kamu sebelumnya tetap ada di sini) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --sky-light: #f0f9ff;
@@ -67,7 +68,6 @@
         .skill-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.5rem; }
         .skill-item { background: var(--sky-light); color: var(--sky-dark); padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
 
-        /* PROJECT SECTION (PERUBAHAN DI SINI) */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .project-card { background: var(--white); border: 1px solid #f1f5f9; border-radius: 24px; overflow: hidden; transition: var(--transition); }
         .project-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(14, 165, 233, 0.1); }
@@ -86,15 +86,15 @@
         .project-img img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Gambar akan menyesuaikan tanpa gepeng */
-            padding: 30px; /* Jarak agar logo tidak nempel ke pinggir kotak */
+            object-fit: contain; 
+            padding: 30px; 
         }
 
         .project-info { padding: 2rem; }
         .project-info h3 { margin-bottom: 0.8rem; color: var(--navy); }
         .project-link { text-decoration: none; color: var(--sky-main); font-weight: 700; }
 
-        /* CONTACT SECTION */
+        /* CONTACT SECTION STYLING PINDAH KE style.css */
         .contact-card { background: var(--navy); color: var(--white); padding: 4rem; border-radius: 40px; text-align: center; }
         footer { text-align: center; padding: 3rem 0; color: #94a3b8; }
     </style>
@@ -144,20 +144,16 @@
         <div class="container">
             <h2 class="section-title">Eksplorasi Proyek</h2>
             <div class="project-grid">
-                
-                <!-- PROYEK 1: BONCAR -->
                 <div class="project-card">
                     <div class="project-img">
                         <img src="boncar.jpeg" alt="Logo Boncar" onerror="this.src='https://via.placeholder.com/200?text=Boncar'">
                     </div>
                     <div class="project-info">
                         <h3>Boncar</h3>
-                        <p>Kalkulator karbon untuk menghitung emisi harian secara akurat.</p>
+                        <p>Kalkulator karbon untuk menghitung karbon hutan.</p>
                         <a href="https://boncar-carboncalculator.vercel.app/" target="_blank" class="project-link">Buka Situs &rarr;</a>
                     </div>
                 </div>
-
-                <!-- PROYEK 2: DATA SCIENCE -->
                 <div class="project-card">
                     <div class="project-img">
                         <img src="eduparlemen.png" alt="EduParlemen" onerror="this.src='https://via.placeholder.com/200?text=Data+Science'">
@@ -168,7 +164,6 @@
                         <span style="color:#94a3b8; font-size: 0.8rem;">Dalam Pengembangan</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -177,9 +172,25 @@
         <div class="container">
             <div class="contact-card">
                 <h2>Mari Berdiskusi</h2>
-                <p>Email: syakuraabdanby@gmail.com</p>
-                <br>
-                <a href="mailto:syakuraabdanby@gmail.com" class="btn primary">Kirim Email</a>
+                <p>Pilih platform yang paling nyaman untuk Anda hubungi:</p>
+                
+                <div class="contact-grid">
+                    <a href="https://wa.me/6285951443082" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/abdan_syakura.by/" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/abdan-syakura-bin-yasir-7b3ab432" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/thanksman25" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:syakuraabdanby@gmail.com" class="contact-btn">
+                        <i class="fa-regular fa-envelope"></i> Email
+                    </a>
+                </div>
             </div>
         </div>
     </section>
